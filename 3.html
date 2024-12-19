@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div id="top">
+            <img src="logo.png" alt="Логотип" width="20px">
+            <div class="group-info">
+                <p>Группа ЭФБО-08-23</p>
+                <p>Шахназарян Гамлет Артакович</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="2.html">Первый семестр</a>
+            <a href="#">Второй семестр</a>
+            <a href="3.html">Услуги</a>
+            <a href="#">Авторизация</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <aside class="sidebar">
+                <h3>Навигация по&nbsp;странице</h3>
+                <ul>
+                    <li><a href="#">Фронтенд</a></li>
+                    <li><a href="#back">Бэкенд</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <div id="osn">
+            <h1>Разработка веб-приложений</h1>
+
+            <div class="container">
+                <div class="card">
+                    <img src="img/attache_850932921.png" alt="Сайт-визитка">
+                    <h2>Сайт-визитка</h2>
+                    <button class="bttn" onclick="openPopup()">Заказать</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/corp-site.png" alt="Корпоративный сайт">
+                    <h2>Корпоративный сайт</h2>
+                    <button class="bttn" onclick="openPopup()">Заказать</button>
+                </div>
+
+                <div class="card">
+                    <img src="img/diploma.webp" alt="Интернет-магазин">
+                    <h2>Интернет-магазин</h2>
+                    <button class="bttn" onclick="openPopup()">Заказать</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="pupp">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <form id="forma">
+                <h2>Заказать сайт-визитку</h2>
+                <div id="anketa">
+                    <label for="name">Как вас зовут:</label>
+                    <input type="text" id="name" placeholder="Например, Иванов Иван Иванович">
+                    <label for="email">Ваш e-mail:</label>
+                    <input type="email" id="email" placeholder="test@mail.ru">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" placeholder="+7 919 999 99 99">
+                    <label for="country">Страна:</label>
+                    <select id="country">
+                        <option value="russia">Россия</option>
+                    </select>
+                    <label for="date">Дата:</label>
+                    <input type="date" id="date">
+                    <label for="comment">Комментарий:</label>
+                    <textarea id="comment" placeholder="Введите ваш комментарий"></textarea>
+                </div>
+                <button onclick="submitForm()">Отправить заявку</button>
+
+            </form>
+        </div>
+
+        <script>
+            function openPopup() {
+                document.getElementById("pupp").style.display = 'block';
+            }
+
+            function closePopup() {
+                document.getElementByIs("pupp").style.display = 'none';
+            }
+
+            function submitForm() {
+                alert('Форма отправлена!');
+                closePopup();
+            }
+        </script>
+    </main>
+    <footer>
+        &copy; Шахназарян Гамлет Артакович, 2024
+    </footer>
+    <script src="script.js"></script> 
+</body>
+
+</html>
